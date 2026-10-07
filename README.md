@@ -19,10 +19,10 @@ The application supports many programming languages, includes an AI Copilot to g
 ## 📸 Screenshots
 
 
-| ![Home Page](screenshots/Homepage.png)
-| ![Drawing Page](screenshots/Discussionpage.png) 
-| ![Drawing Page](screenshots/Codeeditor.png) 
-| ![Drawing Page](screenshots/Drawingpage.png)
+![Home Page](screenshots/Homepage.png)
+![Drawing Page](screenshots/Discussionpage.png) 
+![Drawing Page](screenshots/Codeeditor.png) 
+![Drawing Page](screenshots/Drawingpage.png)
 
 ---
 
