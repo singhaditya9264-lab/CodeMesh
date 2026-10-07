@@ -1,7 +1,7 @@
 import { ICopilotContext } from "@/types/copilot"
 import { createContext, ReactNode, useContext, useState } from "react"
 import toast from "react-hot-toast"
-import axiosInstance from "../api/pollinationsApi"
+
 
 const CopilotContext = createContext<ICopilotContext | null>(null)
 
@@ -32,7 +32,7 @@ const CopilotContextProvider = ({ children }: { children: ReactNode }) => {
             setIsRunning(true)
 
             // Send to your Express backend proxy
-            const response = await fetch("http://localhost:3000/api/copilot", {
+            const response = await fetch("https://codemeshbackend.onrender.com/api/copilot", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

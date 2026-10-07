@@ -7,7 +7,7 @@ function GitHubCorner() {
 
     return (
         <a
-            href="https://github.com/sahilatahar/Code-Sync"
+            href="https://github.com/singhaditya9264-lab/CodeMesh"
             className="github-corner"
             aria-label="View source on GitHub"
             target="_blank"

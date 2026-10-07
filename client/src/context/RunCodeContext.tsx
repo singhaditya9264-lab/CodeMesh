@@ -157,7 +157,7 @@ const RunCodeContextProvider = ({ children }: { children: ReactNode }) => {
                 const response = await axiosInstance.post("/execute", {
                     language,
                     version,
-                    files: [{ name: activeFile.name, content: activeFile.content }],
+                    files: [{ name: activeFile.name, content: activeFile.content || "" }],
                     stdin: input,
                 })
 
@@ -169,10 +169,10 @@ const RunCodeContextProvider = ({ children }: { children: ReactNode }) => {
             } catch {
                 // In-browser execution fallbacks when API gives 401
                 if (isPy) {
-                    const pyResult = await runPythonLocally(activeFile.content)
+                    const pyResult = await runPythonLocally(activeFile.content || "")
                     setOutput(pyResult || "Code executed successfully (no output).")
                 } else if (isJs) {
-                    const jsResult = runJavaScriptLocally(activeFile.content)
+                    const jsResult = runJavaScriptLocally(activeFile.content || "")
                     setOutput(jsResult || "Code executed successfully (no output).")
                 } else {
                     toast.error("Execution failed: external runtime unreachable")
@@ -207,4 +207,4 @@ const RunCodeContextProvider = ({ children }: { children: ReactNode }) => {
 }
 
 export { RunCodeContextProvider }
-export default RunCodeContext
+export default RunCodeContext   
